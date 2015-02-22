@@ -56,7 +56,12 @@ can use his Javascript knowledge both on the client and the server.</p>
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is the concept of non blocking IO?</h3>
 
-<p></p>
+<p>Non-blocking refers to code that doesn't block execution. One advantage of this is that the CPU can be kept busy and can save you memory. 
+An example of non-blocking is how node.js uses only one thread to service all requests. Thus, the I/O is the bottleneck, not the computations.
+With that being said, "when requests arrive at the server, they are serviced one at a time. When the code serviced needs to query the DB for example, 
+it sends off a request to the DB. However, instead of waiting for the response and stall, it sends the callback to a second queue and the code continues running. 
+Now when the DB returns data, the callback gets queued in a third queue where they are pending execution. When the engine is doing nothing (stack empty), 
+it picks up a callback from the third queue and executes it.""</p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
