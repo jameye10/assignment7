@@ -39,18 +39,29 @@ Groupon, LinkedIn, Microsoft, Yahoo!, Walmart, and GoDaddy are just a few exampl
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Node.js?</h3>
 
-<p></p>
+<p>This brings up the question, What really is node.js? Sure, it sounds fancy and relatively new, but what does it do, and what are its advantages?
+Well, first off it incorporates web development in a dynamic language that runs on a VM that is fast. Second, it can handle a lot of concurrent connections.
+Third, it is great for creating event loops. Fourth, it is used with Javascript, which is already really popular among programmers. Lastly, it can be used
+on a web server, which eases communication.</p>
 
 <h3>
 <a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>What makes node different than developing with more traditional server side languages?
 </h3>
 
-<p></p>
+<p>Now that we know what node.js is, how in the world is it different than ever other server side language? Basically, it is different because it is EVENT driven, and it uses Javascript. 
+By event driven, I mean that is uses an asynchronous architecture, rather than the more traditional server side sychronous architecture. This means that node.js
+reacts to events and sends events to the database. Because of this, the language scales well. Also, because the language uses Javascript, a developer using node.js
+can use his Javascript knowledge both on the client and the server.</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is the concept of non blocking IO?</h3>
 
-<p></p>
+<p>Non-blocking refers to code that doesn't block execution. One advantage of this is that the CPU can be kept busy and can save you memory. 
+An example of non-blocking is how node.js uses only one thread to service all requests. Thus, the I/O is the bottleneck, not the computations.
+With that being said, "when requests arrive at the server, they are serviced one at a time. When the code serviced needs to query the DB for example, 
+it sends off a request to the DB. However, instead of waiting for the response and stall, it sends the callback to a second queue and the code continues running. 
+Now when the DB returns data, the callback gets queued in a third queue where they are pending execution. When the engine is doing nothing (stack empty), 
+it picks up a callback from the third queue and executes it.""</p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
