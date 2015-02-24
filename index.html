@@ -61,7 +61,8 @@ An example of non-blocking is how node.js uses only one thread to service all re
 With that being said, "when requests arrive at the server, they are serviced one at a time. When the code serviced needs to query the DB for example, 
 it sends off a request to the DB. However, instead of waiting for the response and stall, it sends the callback to a second queue and the code continues running. 
 Now when the DB returns data, the callback gets queued in a third queue where they are pending execution. When the engine is doing nothing (stack empty), 
-it picks up a callback from the third queue and executes it.""</p>
+it picks up a callback from the third queue and executes it." All of this essentially means that there is no wait, or stall time. Unlike php, there is 
+not going to be any sleep time, which translates into wasted time and space. Thus, node.js is more efficient to use in this area among others.</p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sources for blog:</h3>
